@@ -65,4 +65,8 @@ class Store {
     isEmpty() {
         return this.inventory.length === 0;
     }
+
+    getProductNames() {
+        return this.inventory.map(product => product.name);
+    }
 }
