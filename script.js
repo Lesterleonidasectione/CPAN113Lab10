@@ -1,3 +1,20 @@
+/**
+ * CPAN113 Lab 10 – Object-Oriented Inventory System
+ *
+ * This program models a simple store inventory using classes:
+ * - ProductProperties: Base product with name, price, quantity
+ * - PerishableProductProperties: Adds expiration date + overrides value logic
+ * - Store: Holds products and provides inventory operations
+ *
+ * The script:
+ * 1. Creates a store
+ * 2. Adds sample products (Laptop, Milk)
+ * 3. Applies a discount to the Laptop
+ * 4. Searches for a product by name
+ * 5. Prints inventory totals and product list
+ */
+
+
 class ProductProperties {
     constructor(name, price, quantity) {
         this.name = name;
