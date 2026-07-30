@@ -76,3 +76,6 @@ const store = new Store();
 
 store.addProduct(new ProductProperties("Laptop", 1200, 2));
 store.addProduct(new PerishableProductProperties("Milk", 4, 5, "2026-08-01"));
+
+// Apply a 10% discount to the Laptop
+ProductProperties.applyDiscount(store.inventory[0], 0.10);
