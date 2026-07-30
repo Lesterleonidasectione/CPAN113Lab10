@@ -48,6 +48,12 @@ class Store {
         this.inventory.push(product);
     }
 
+    getInventoryValue() {
+        return this.inventory.reduce((total, product) => {
+            return total + product.getTotalValue();
+        }, 0);
+    }
+
     findProductByName(name) {
         return this.inventory.find(product => product.name === name);
     }
