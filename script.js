@@ -12,7 +12,12 @@ class ProductProperties {
     toString() {
         return `${this.name} - $${this.price} x ${this.quantity}`;
     }
+    
+    static applyDiscount(product, rate) {
+        product.price = product.price * (1 - rate);
+    }
 }
+
 class PerishableProductProperties extends ProductProperties {
     constructor(name, price, quantity, expirationDate) {
         super(name, price, quantity);
@@ -33,3 +38,4 @@ class PerishableProductProperties extends ProductProperties {
         return `${super.toString()} (Expires: ${this.expirationDate})`;
     }
 }
+
