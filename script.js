@@ -11,3 +11,9 @@ class ProductProperties {
         return `${this.name} - $${this.price} x ${this.quantity}`;
     }
 }
+class PerishableProductProperties extends ProductProperties {
+    constructor(name, price, quantity, expirationDate) {
+        super(name, price, quantity);
+        this.expirationDate = expirationDate;
+    }
+}
