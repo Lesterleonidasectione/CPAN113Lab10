@@ -28,9 +28,9 @@ class ProductProperties {
         return this.price * this.quantity;
     }
 
-    // String representation of the product
+    // String representation of the product (formatted to 2 decimal places)
     toString() {
-        return `Product: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}`;
+        return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`;
     }
 
     /**
@@ -80,9 +80,9 @@ class Store {
         }, 0);
     }
 
-    // Finds a product by name
+    // Finds a product by name (case-insensitive)
     findProductByName(name) {
-        return this.inventory.find(product => product.name === name) || null;
+        return this.inventory.find(product => product.name.toLowerCase() === name.toLowerCase()) || null;
     }
 }
 
@@ -108,13 +108,13 @@ store.addProduct(milk);
 store.addProduct(yogurt);
 
 // Print inventory value BEFORE discount
-console.log("Total Inventory Value (Before 15% Discount):", store.getInventoryValue());
+console.log(`Total Inventory Value (Before 15% Discount): $${store.getInventoryValue().toFixed(2)}`);
 
 // Apply 15% discount to ALL products
 ProductProperties.applyDiscount(store.inventory, 0.15);
 
 // Print inventory value AFTER discount
-console.log("Total Inventory Value (After 15% Discount):", store.getInventoryValue());
+console.log(`Total Inventory Value (After 15% Discount): $${store.getInventoryValue().toFixed(2)}`);
 
 // Find and print a specific product by name
 const searchName = "Yogurt";
