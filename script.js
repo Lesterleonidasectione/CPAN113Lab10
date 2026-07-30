@@ -70,3 +70,9 @@ class Store {
         return this.inventory.map(product => product.name);
     }
 }
+
+// Sample data for testing
+const store = new Store();
+
+store.addProduct(new ProductProperties("Laptop", 1200, 2));
+store.addProduct(new PerishableProductProperties("Milk", 4, 5, "2026-08-01"));
