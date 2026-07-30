@@ -28,4 +28,8 @@ class PerishableProductProperties extends ProductProperties {
         }
         return baseValue;
     }
+    
+    toString() {
+        return `${super.toString()} (Expires: ${this.expirationDate})`;
+    }
 }
