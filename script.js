@@ -61,4 +61,8 @@ class Store {
     getProductCount() {
         return this.inventory.length;
     }
+
+    isEmpty() {
+        return this.inventory.length === 0;
+    }
 }
