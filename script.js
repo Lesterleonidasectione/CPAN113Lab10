@@ -82,3 +82,8 @@ ProductProperties.applyDiscount(store.inventory[0], 0.10);
 
 // Search for the Milk product and print it
 console.log(store.findProductByName("Milk").toString());
+
+// Final summary output
+console.log("Total Inventory Value:", store.getInventoryValue());
+console.log("Product Count:", store.getProductCount());
+console.log("Product Names:", store.getProductNames());
