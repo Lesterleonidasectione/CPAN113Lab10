@@ -57,4 +57,8 @@ class Store {
     findProductByName(name) {
         return this.inventory.find(product => product.name === name);
     }
+
+    getProductCount() {
+        return this.inventory.length;
+    }
 }
