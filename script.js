@@ -47,4 +47,8 @@ class Store {
     addProduct(product) {
         this.inventory.push(product);
     }
+
+    findProductByName(name) {
+        return this.inventory.find(product => product.name === name);
+    }
 }
